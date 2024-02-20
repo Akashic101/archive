@@ -11,9 +11,18 @@ This is the repo of my personal archive powered by 11ty. You can access it under
 
 ## Patch Notes
 
+**Version 1.0.0**
+- Updated layout
+- Created day, month, year and decade-filters
+- Created seperate pages for content
+- Added Paderborner Volksblatt (01.1849-04.1849)
+<details>
+  <summary>Previous versions</summary>
+
 **Version 0.0.1**
 - Added index
 - Added ikea-catalog (1950-2000)
+</details> 
 
 ## Roadmap
 
