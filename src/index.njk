@@ -1,166 +1,28 @@
 ---
-title: Site Files
+title: David's archive
 layout: base.njk
 ---
 
-<h2>1950's</h2>
+<h1>Newest additions</h1>
 
-{% set filteredFiles = collections.fileList | filterByDecade(1950) %}
+{%- for post in collections.posts -%}
+<h2>{{ post.data.title }}</h2>
+<p>{{ post.data.description }}</p>
+<a href={{ post.data.permalink }}>You can find them here</a>
+{%- endfor -%}
 
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
+<hr>
 
-<h2>1960's</h2>
+<h1>Newspapers</h1>
 
-{% set filteredFiles = collections.fileList | filterByDecade(1960) %}
+{%- for post in collections.newspaper -%}
+  <a href={{ post.data.permalink }}>{{ post.data.title }}</a>
+{%- endfor -%}
 
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
+<hr>
 
-<h2>1970's</h2>
+<h1>Catalogues</h1>
 
-{% set filteredFiles = collections.fileList | filterByDecade(1970) %}
-
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
-
-<h2>1980's</h2>
-
-{% set filteredFiles = collections.fileList | filterByDecade(1980) %}
-
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
-
-<h2>1990's</h2>
-
-{% set filteredFiles = collections.fileList | filterByDecade(1990) %}
-
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
-
-<h2>2000's</h2>
-
-{% set filteredFiles = collections.fileList | filterByDecade(2000) %}
-
-{% if filteredFiles.length > 0 %}
-  <table>
-  <tr>
-    <th>Name</th>
-    <th>Extension</th>
-    <th>Path</th>
-    <th>Created</th>
-    <th>Last modified</th>
-  </tr>
-  {% for file in filteredFiles %}  
-    <tr>
-      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
-      <td>{{ file.extension }}</td>
-      <td>{{ file.path }}</td>
-      <td>{{ file.created | localDate }}</td>
-      <td>{{ file.modified | localDate }}</td>
-    </tr>
-  {% endfor %}
-</table>  
-{% else %}
-  <p>No file data to display</p>
-{% endif %}
+{%- for post in collections.catalogues -%}
+  <a href={{ post.data.permalink }}>{{ post.data.title }}</a>
+{%- endfor -%}
