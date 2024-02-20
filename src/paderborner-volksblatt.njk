@@ -1,0 +1,119 @@
+---
+title: Paderborner Volksblatt (1849)
+tags: 
+- newspaper
+- posts
+permalink: newspaper/paderborner-volksblatt.html
+description: This collection features every edition of the 1849 "paderborner Volksblatt" of the Germany city Paderborn
+layout: base.njk
+---
+
+<h1>{{ title }}</h1>
+
+<h2>January</h2>
+
+{% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(1) %}
+
+{% if filteredFiles.length > 0 %}
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Extension</th>
+    <th>Path</th>
+    <th>Created</th>
+    <th>Last modified</th>
+  </tr>
+  {% for file in filteredFiles %}  
+    <tr>
+      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
+      <td>{{ file.extension }}</td>
+      <td>{{ file.path }}</td>
+      <td>{{ file.created | localDate }}</td>
+      <td>{{ file.modified | localDate }}</td>
+    </tr>
+  {% endfor %}
+</table>  
+{% else %}
+  <p>No file data to display</p>
+{% endif %}
+
+<h2>February</h2>
+
+{% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(2) %}
+
+{% if filteredFiles.length > 0 %}
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Extension</th>
+    <th>Path</th>
+    <th>Created</th>
+    <th>Last modified</th>
+  </tr>
+  {% for file in filteredFiles %}  
+    <tr>
+      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
+      <td>{{ file.extension }}</td>
+      <td>{{ file.path }}</td>
+      <td>{{ file.created | localDate }}</td>
+      <td>{{ file.modified | localDate }}</td>
+    </tr>
+  {% endfor %}
+</table>  
+{% else %}
+  <p>No file data to display</p>
+{% endif %}
+
+<h2>March</h2>
+
+{% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(3) %}
+
+{% if filteredFiles.length > 0 %}
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Extension</th>
+    <th>Path</th>
+    <th>Created</th>
+    <th>Last modified</th>
+  </tr>
+  {% for file in filteredFiles %}  
+    <tr>
+      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
+      <td>{{ file.extension }}</td>
+      <td>{{ file.path }}</td>
+      <td>{{ file.created | localDate }}</td>
+      <td>{{ file.modified | localDate }}</td>
+    </tr>
+  {% endfor %}
+</table>  
+{% else %}
+  <p>No file data to display</p>
+{% endif %}
+
+<h2>April</h2>
+
+{% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(4) %}
+
+{% if filteredFiles.length > 0 %}
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Extension</th>
+    <th>Path</th>
+    <th>Created</th>
+    <th>Last modified</th>
+  </tr>
+  {% for file in filteredFiles %}  
+    <tr>
+      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
+      <td>{{ file.extension }}</td>
+      <td>{{ file.path }}</td>
+      <td>{{ file.created | localDate }}</td>
+      <td>{{ file.modified | localDate }}</td>
+    </tr>
+  {% endfor %}
+</table>  
+{% else %}
+  <p>No file data to display</p>
+{% endif %}
