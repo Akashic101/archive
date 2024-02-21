@@ -10,7 +10,8 @@ layout: base.njk
 
 <h1>{{ title }}</h1>
 
-<h2>January</h2>
+<details>
+  <summary><h2>January</h2></summary>
 
 {% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(1) %}
 
@@ -36,8 +37,11 @@ layout: base.njk
 {% else %}
   <p>No file data to display</p>
 {% endif %}
+</details>
+<hr>
 
-<h2>February</h2>
+<details>
+  <summary><h2>February</h2></summary>
 
 {% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(2) %}
 
@@ -63,8 +67,11 @@ layout: base.njk
 {% else %}
   <p>No file data to display</p>
 {% endif %}
+</details>
+<hr>
 
-<h2>March</h2>
+<details>
+  <summary><h2>March</h2></summary>
 
 {% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(3) %}
 
@@ -90,10 +97,42 @@ layout: base.njk
 {% else %}
   <p>No file data to display</p>
 {% endif %}
+</details>
+<hr>
 
-<h2>April</h2>
+<details>
+  <summary><h2>April</h2></summary>
 
 {% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(4) %}
+
+{% if filteredFiles.length > 0 %}
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Extension</th>
+    <th>Path</th>
+    <th>Created</th>
+    <th>Last modified</th>
+  </tr>
+  {% for file in filteredFiles %}  
+    <tr>
+      <td><a href="{{ file.path }}" target="_blank">{{ file.name }}</a></td>
+      <td>{{ file.extension }}</td>
+      <td>{{ file.path }}</td>
+      <td>{{ file.created | localDate }}</td>
+      <td>{{ file.modified | localDate }}</td>
+    </tr>
+  {% endfor %}
+</table>  
+{% else %}
+  <p>No file data to display</p>
+{% endif %}</details>
+<hr>
+
+<details>
+  <summary><h2>June</h2></summary>
+
+{% set filteredFiles = collections.fileList | filterByName("Paderborner_Volksblatt") | filterByMonth(5) %}
 
 {% if filteredFiles.length > 0 %}
   <table>
